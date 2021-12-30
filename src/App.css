@@ -1,0 +1,179 @@
+.App {
+  text-align: center;
+  width: 100%;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid black;
+  font-size: 25px;
+  color: gray;
+  padding: 20px;
+}
+
+.fa-pinterest-square {
+  color: red;
+  border-radius: 50%;
+}
+
+input {
+  width: 90%;
+  height: 40px;
+  border-radius: 15px;
+  background-color: #e6e6e6;
+}
+
+.header button {
+  background-color: black;
+  color: white;
+  border: 0;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 40%;
+}
+
+.input-wrapper {
+  display: inline-block;
+  width: 75%;
+  position: relative;
+}
+
+.fa-search {
+  position: relative;
+  left: 40px;
+  top: 8px;
+}
+
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.imageContainer {
+  -webkit-column-count: 3;
+          column-count: 3;
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+  width: 95%;
+}
+
+@media (max-width: 1200px) {
+  .imageContainer {
+    -webkit-column-count: 2;
+            column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .imageContainer {
+    -webkit-column-count: 1;
+            column-count: 1;
+  }
+}
+
+.card {
+  border-radius: 5%;
+  display: inline-block;
+  border: 1px solid purple;
+}
+
+.shell {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5%;
+}
+
+.card img {
+  border-radius: 5%;
+}
+
+.buttonBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+  margin: 0;
+  bottom: 0px;
+  width: 50%;
+  height: 50px;
+  background-color: black;
+  z-index: 3;
+}
+
+h4 {
+  color: green;
+  float: left;
+  margin: 0;
+}
+
+.out {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid black;
+}
+
+.popup-background {
+  visibility: hidden;
+  position: absolute;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.card:hover .popup-background {
+  visibility: visible;
+}
+/*# sourceMappingURL=App.css.map */

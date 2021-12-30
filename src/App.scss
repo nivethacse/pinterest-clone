@@ -1,0 +1,537 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+.App {
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 25px;
+  color: gray;
+  padding: 20px;
+}
+
+.fa-pinterest-square{
+  color: red;
+  border-radius: 50%;
+}
+
+.fa-pinterest-square:hover{
+  cursor: pointer;
+}
+
+input{
+  width: 90%;
+  height: 40px;
+  border-radius: 30px;
+  background-color: rgb(230, 230, 230);
+  border:0;
+  padding-left: 60px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+input:hover{
+  background-color: rgb(189, 189, 189);
+}
+
+.homeButton{
+  background-color: black;
+  color: white;
+  border: 0;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 40%;
+  cursor: pointer;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 70%;
+  height: 100%;
+}
+
+.fa-search {
+  position: absolute;
+  display: inline-block;
+  left:  40px;
+  font-size: 25px;
+  top: 8px;
+
+}
+
+.circle{
+  font-size: 20px;
+  font-weight: bold;
+  width: 100px;
+  height: 50px;
+  background-color: rgb(197, 197, 197);
+  border-radius: 10%;
+  background-color: rgb(152, 152, 236);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  cursor: pointer;
+  
+}
+.circle:hover{
+  background-color: rgb(73, 73, 230);
+
+}
+
+.letter{
+  color: red;
+  right: 30px;
+  color: black;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', sans-serif;
+}
+.signInScreen{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width:500px;
+  padding: 20px;
+  background-color:#FFF;
+  color: rgb(32, 32, 95);
+  border:3px solid #CCC;
+  border-radius: 5px;
+  z-index:5;
+  font-size: 35px;
+  margin: 5% auto; 
+  left: 0;
+  right: 0;
+}
+.signInScreen input{
+  width: 60%;
+  border-radius: 15px;
+  font-size: 15px;
+  padding: 5px;
+  border: 2px solid rgb(207, 207, 207);
+  background-color: white;
+  margin-bottom: 5px;
+}
+.signInScreen .continue{
+  width: 60%;
+  font-size: 15px;
+  border-radius: 15px;
+  font-size: 15px;
+  padding: 5px;
+  background-color: rgb(204, 14, 14);
+  color: white;
+  border:0px;
+  padding: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.header i{
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.gallery{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+} 
+
+.imageContainer{
+  column-count: 3;
+  column-gap: 20px;
+  width: 95%;
+}
+
+@media (max-width:1200px){
+  .imageContainer {
+    column-count: 2;
+  }
+  }
+
+  @media (max-width:600px){
+    .imageContainer {
+      column-count: 1;
+    }
+    }
+
+.card{
+  border-radius: 5%;
+  display: inline-block;
+}
+
+.card img{
+  border-radius: 5%;
+}
+
+.shell{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  
+}
+
+.shell img{
+  border-radius: 15px 0px 0px 15px;
+}
+
+.buttonBox{
+  visibility: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-basis: 50% 20% 20%;
+  position: absolute;
+  margin: 0;
+  bottom: 0px;
+  padding: 10px;
+  height: 40px;
+  z-index: 3;
+}
+.linkBackground{
+  border-radius: 25px;
+  background-color: rgba(241, 241, 241, 0.7);
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkBackground button{
+padding: 5px;
+font-weight: bold;
+font-size: 16px;
+border:0;
+background-color: rgba(241, 241, 241,0);
+}
+
+.linkBackground:hover{
+  background-color: rgb(230, 230, 230);
+  cursor: pointer;
+}
+
+.two{
+  flex-basis: 20%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: rgb(216, 216, 216);
+}
+
+.saveButton, .editButton{
+  visibility: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  padding-right: 20px;
+  padding-top: 20px;
+  margin: 0;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50px;
+  z-index: 6;
+}
+
+.saveButton button, .editButton button{
+  border-radius: 40%;
+  padding: 10px;
+  background-color: #e60023;
+  color: white;
+  font-weight: bold;
+  border:0;
+  margin-right: 5px;
+  font-size: 16px;
+  width: 70px;
+  height: 50px;
+}
+.saveButton button:hover, .editButton button:hover{
+  background-color: brown;
+  cursor: pointer;
+}
+.view{
+  float: left;
+}
+h4{
+  color: green;
+  float: left;
+  margin: 0;
+}
+.out{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+.popup-background {
+  visibility: hidden;
+  position: absolute;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.card:hover .saveButton{
+  visibility: visible;
+}
+
+.card:hover .popup-background{
+  visibility: visible;
+}
+.card:hover .buttonBox{
+  visibility: visible;
+}
+
+.ImagePage{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.doubleView{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 70%;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 5px 10px #cacaca;
+}
+
+.imageLeft, .imageDetails{
+  flex-basis: 50%;
+}
+
+.profileDetails{
+  display: flex;
+  width: 100%; 
+}
+.blockOne{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.blockOne img{
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  
+}
+.ptag{
+  font-size: 25px;
+  margin-left: 5px;
+}
+.blockTwo{
+  background-color: black;
+  margin-left: auto
+}
+
+.action{
+  width: 100%;
+  height: 200px;
+  background-color: red;
+}
+.selector button{
+  float: left;
+}
+.mapData{
+  column-gap: 55px;
+  width: 100%;
+  
+  
+}
+.mapData .shell{
+  margin: 20px;
+}
+.bbBox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-basis: 50% 20% 20%;
+  margin: 0;
+  bottom: 0px;
+  width: 90%;
+  padding: 10px;
+  height: 40px;
+  background-color: black;
+  z-index: 3;
+}
+
+.actionSave{
+  flex-basis: 10%;
+  height: 100%;
+  border-radius: 20px;
+  border-radius: 10%;
+  padding: 10px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border:0;
+  font-size: 16px;
+  width: 90px;
+  float: right;
+  
+}
+.actionLeft{
+  flex-basis: 30%;
+}
+.actionLeft button{
+  height: 30px;
+  width: 50%;
+  border-radius: 20px;
+  background-color: rgb(216, 216, 216);
+
+}
+.des{
+  font-family: "Nunito";
+  padding: 25px;
+  color: black;
+  
+}
+.PageLink{
+  border-radius: 5px;
+  padding: 5px;
+ 
+}
+.PageLink:hover{
+  cursor: pointer;
+  text-decoration: underline;
+
+}
+.grey{
+  color: grey;
+  
+
+}
+.green{
+  color: green;
+  
+}
+.userPage{
+  width: 200px;
+  height: 200px;
+  background-color: wheat;
+}
+
+.selectionBox{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgb(243, 243, 243);
+  right: 10px;
+  top: 80px;
+  z-index: 7;
+}
+.selectionBox button{
+  width: 100px;
+  height: 50px;
+  background-color: rgb(231, 231, 231);
+ border: 0px;
+ border-radius: 5px;
+ font-weight: bold;
+ cursor: pointer;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.selectionBox button:hover{
+ background-color: rgb(212, 212, 212);
+ 
+}
+
+.centerImage{
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    margin-left: -60px;
+    padding: 5px;
+    background-color: #FFF;
+    border: 3px solid #CCC;
+    border-radius: 5px;
+    z-index: 25;
+}
+
+.centerImage img{
+  width: 100%;
+  height: 100%;
+}
+.centerImage:hover{
+  cursor: zoom-out;
+}
+.shell button{
+  z-index: 20;
+}
+
+.shell:hover .editButton{
+  visibility: visible;
+}
+.editButton button{
+  width: 200px;
+}
+.editButton:hover{
+  cursor: pointer;
+}
+.inputClose{
+  position: absolute;
+  bottom: 90%;
+  right: 40px;
+  width: 30px;
+  height: 30px;
+  color: white;
+  border: 0px;
+  background-color: black;
+  border-radius: 10px;
+  font-size: 10px;
+  cursor: pointer;
+  
+}
+.inputClose:hover{
+
+  box-shadow: 1px 1px 1px black;
+  
+
+}
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  
+  background-color: rgb(241, 241, 241);
+  font-size: 25px;
+  margin-top: auto;
+  
+  padding: 20px;
+}
+.fa-github{
+  cursor: pointer;
+}

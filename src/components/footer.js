@@ -3,7 +3,7 @@ const Footer = () => {
     <div className="footer">
       <i
         onClick={() => {
-          window.open("https://github.com/infinites5/pinclone");
+          window.open("https://github.com/nivethacse/pinterest-clone");
         }}
         className="fa fa-github"
         aria-hidden="true"
